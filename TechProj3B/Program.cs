@@ -18,8 +18,12 @@ namespace TechProj3B
             // Populate the array with random numbers (can't use a foreach here because you're assigning elements to the array)
             for(int i = 0; i < numbers.Length; i++)
             {
-                numbers[i] = random.Next(0, 1337);
+                // Randomly pick a number from 0-1337 (maxValue is 1338, but the method selects it to be less than maxValue per documentation)
+                numbers[i] = random.Next(0, 1338);
             }
+
+            // Sort the array
+            Array.Sort(numbers);
 
             // Output the contents of the array
 
